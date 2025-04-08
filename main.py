@@ -17,9 +17,8 @@ path_to_file = sys.argv[1] if len(sys.argv) > 1 else print("Usage: python3 main.
     
 # Get the text of the book and return it.
 def get_book_text(filepath): 
-    if filepath == None:
+    if filepath == None:# Just to make sure we catch any none values.
         file_contents = "No file found"
-        #print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
     else:
         with open(filepath) as f:
